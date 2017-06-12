@@ -14,54 +14,73 @@ knitr::opts_chunk$set(echo = TRUE)
 **1.** List at least 3 defining features of the relational model. 
 
 Tables - Rows and Columns, rows = records, columns = attributes  
-Tuple  - Single Row of a table.
-Key    - Uniquely Identify a row
-Schema - Table, attributes, names
+Tuple  - Single Row of a table.  
+Key    - Uniquely Identify a row  
+Schema - Table, attributes, names  
 
 **2.** For each of the following acronyms, write what the letters standard for, 
 and then give a short definition of the concept (1-2 sentences): 
-- ETL
-- SQL
-- CRUD
-- RDBMS 
+- ETL:   Extract Transform Load  
+- SQL:   Structured Query Language. SQL is used to communicate with a relational database.  
+- CRUD:  Create read update Destroy  
+- RDBMS: Relational database Management System  
 
 **3.** Define the term ‘schema’. 
 
+Outline or structure of a database.  
+
 **4.** Check any of the following which must be defined by the schema in a relational database system:
-- field names
-- table dimensions
-- operating system version
-- field types
-- primary key
-- programming language
-- table names
+- field names Yes  
+- table dimensions NO  
+- operating system version NO  
+- field types Yes  
+- primary key Yes  
+- programming language NO? WTF?  
+- table names YES  
 
 **5a.** What does it mean to say that redis is an in-memory store? (1-2 sentences)
 
+Uses RAM to store data rather than disk.  
+
 **5b.** What is the primary advantage of using an in-memory datastore? (1 sentence)
+
+Fast. 
 
 **5c.** What is the primary disadvantage of using an in-memory datastore? (1 sentence)
 
+Limited to size of RAM sometimes. Could possibly loose data. More expensive.
+
 **6.** Check any of the following that you would expect to see included in a connection string: 
-- number of records
-- programming language
-- host
-- port
-- username
-- client type
-- database version
-- password
-- filename
+- number of records NO  
+- programming language NO  
+- host YES  
+- port YES  
+- username YES   
+- client type YES  
+- database version YES  
+- password YES  
+- filename YES  
 
 **7a.** What does it mean to say that our software or system is ‘distributed’? (1-2 sentences)
 
+System that is located on a network of computers rather than 1 computer.  
+
 **7b.** What is the primary advantage or motivation for using a distributed system? (1 sentence)
+
+Scalability. Fault tolerance. Latency. Throughput.  
 
 **7c.** What is the primary disadvantage of using a distributed system? (1 sentence)
 
-**8.** What does HDFS stand for. What problem does HDFS solve? 
+Hard to use and costly.  
+
+**8.** What does HDFS stand for. What problem does HDFS solve?
+
+Hadoop Distributed File System. massive scale. Fault Taulerant. Cheap. Abstacted Distribution.
 
 **9.** In Apache Spark, what does the acronym RDD stand for. What problem does the RDD solve? 
 
+Resilient distributed Dataset
+
 **10.** Why are there so many types of databases? 
 
+To solve specific problems.
