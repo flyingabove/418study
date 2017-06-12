@@ -82,11 +82,20 @@ h(x) = min{d(Loss)/d(F(x))}
 
 **15.** Describe the main tuning parameters for GBMs. How do they relate to model complexity?
 
-
+Learning Rate      - Aggressiveness in update the model
+Ntrees             - # of trees
+MaxDepth           - # of layers trees can have
+Nfolds             - # of divisions used for cross vaildation.
+Stopping Rounds    - Number of rounds in which if the tolerance is not met, stops model.
+Stopping Metrics   - The Metric, when not improved, stops the model from continuing.
+Stopping Tolerance - Model stops after consecutive models do not improve this much in testing error
 
 **16.** Describe 3 tricks in training neural networks. 
 
 **17.** Describe grid and random search for hyper-parameter tuning.
+
+Grid   - Search Through Everything
+Random - Randomly select, then stop when does not improve after n tries.
 
 **18.** What are ensembles? What are some of the advantages and disadvantages of using them.
 
