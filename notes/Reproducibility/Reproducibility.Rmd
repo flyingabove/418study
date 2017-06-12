@@ -1,0 +1,52 @@
+---
+title: "ReproducibilityNotes"
+author: "Christian Gao"
+date: "6/11/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#### Reproducibility
+
+**1.** Define repeatability in the context of research
+
+Repeatability or test–retest reliability is the variation in measurements taken by a single person or instrument on the same item, under the same conditions, and in a short period of time. A less-than- perfect test–retest reliability causes test–retest variability.
+
+**2.** Define reproducibility in the context of research
+
+An analysis is reproducible if there is a specific set of computational funnctions/ analyses (usually specified in terms of code) that exactly reproduce all of the numbers in a published paper from raw data. It is now recognized that a critical component of the scientific process is that data analyses can be reproduced.
+
+**3.** Define replicability in the context of research
+
+A study is only replicable if you perform the exact same experiment (at least) twice, collect data in the same way both Gmes, perform the same data analysis, and arrive at the same conclusions.
+
+**4.** Define computational reproducibility
+
+When detailed information is provided about code, software, hardware and implementation details.
+
+**5.** Define empirical reproducibility
+
+When detailed information is provided about non-computation empirical scientific experiments and observations In practice this is enabled by making data freely available, as well as details of how the data was collected.
+
+**6.** Define statistical reproducibility
+
+When detailed information is provided about the choice of statistical tests, model parameters, threshold values, etc. This mostly relates to pre-registration of study design to prevent p-value hacking and other manipulations.
+
+**7.** What is the primary difference in the execution lifecycle of a jupyter notebook vs a knitR document
+
+Jupyter notebooks have live kernels so they dont have to be run in order while knitr has to run in order.
+
+**8.** List and explain the components of a knitR document
+
+
+**9.** What is meant by the statement "shiny is a reactive framework"
+
+
+**10.** What are the commands to retrieve a git repository from github, modify a file, commit it, and push it back to github
+
+git clone, git add, git commit -m , git push
+
