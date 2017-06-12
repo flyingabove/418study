@@ -42,9 +42,11 @@ Jupyter notebooks have live kernels so they dont have to be run in order while k
 
 **8.** List and explain the components of a knitR document
 
+Markdown Section, Rcode Section.
 
 **9.** What is meant by the statement "shiny is a reactive framework"
 
+Controlling parts of the app to update in response to user inputs.
 
 **10.** What are the commands to retrieve a git repository from github, modify a file, commit it, and push it back to github
 

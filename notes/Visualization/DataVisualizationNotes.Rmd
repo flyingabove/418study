@@ -58,7 +58,9 @@ stupid
 
 **10.** Using ggplot and the iris dataset, what is the command for a scatterplot of Sepal Length and Width colored by species with dot area scaled by the difference between petal width and length?
 
-**11.** !!!Describe the major components of a Shiny application
+**11.** Describe the major components of a Shiny application
+
+Server, UI, Inputs, Outputs Graphs
 
 **12.** !!!Why won't this shiny code run:
 

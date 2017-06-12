@@ -92,6 +92,8 @@ Stopping Tolerance - Model stops after consecutive models do not improve this mu
 
 **16.** Describe 3 tricks in training neural networks. 
 
+Convolution- filter, Relu- apply activation, Pool- Downsample.
+
 **17.** Describe grid and random search for hyper-parameter tuning.
 
 Grid   - Search Through Everything
@@ -99,8 +101,17 @@ Random - Randomly select, then stop when does not improve after n tries.
 
 **18.** What are ensembles? What are some of the advantages and disadvantages of using them.
 
+Bagging  -(Bootstrap Aggregation) Decrease Variance  
+Boosting -Combining models (majority vote) 
+Stacking -Using Model to estimate the weights of each model.
+
 **19.** Describe k-means clustering.
+
+Given a set of observations. K-means clustering for each proposed k clusters tries to reduce the within cluster sum of squares.
+Assign Step: assign each cluster to smallest sum of squares.
+Update Step: Calculate new centroids.
 
 **20.** Describe hierarchical clustering.
 
+Clustering of clusters based on set K.
 
