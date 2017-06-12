@@ -53,7 +53,7 @@ Model enterpreting random noise as patterns in the data.
 
 Randomly select n parameters from N parameter possibilities. If parameters dont change within M rounds then stop.
 
-**10.** What is an ROC curve?
+**10.** **What is an ROC curve?**
 
 Receiver Operating Characteristic curve. TPR vs FPR curve on some threshold parameter.
 
