@@ -130,11 +130,23 @@ $(document).ready(function () {
 </div>
 <div id="wc" class="section level4">
 <h4>wc</h4>
-<p>-l lines -w words -c characters</p>
+<p>-l lines<br />
+-w words<br />
+-c characters</p>
 </div>
 <div id="sort" class="section level4">
 <h4>sort</h4>
-<p>-u unique -r reverse</p>
+<p>-n sort by numeric<br />
+-u unique<br />
+-r reverse</p>
+</div>
+<div id="uniq" class="section level4">
+<h4>uniq</h4>
+<p>-c count<br />
+-d print duplicated<br />
+-f skips lines for determining uniqness<br />
+-i ignore case<br />
+-u print uniq</p>
 </div>
 <div id="head" class="section level4">
 <h4>head</h4>
@@ -142,39 +154,82 @@ $(document).ready(function () {
 </div>
 <div id="file-types" class="section level4">
 <h4>file types</h4>
-<p>- regular d directory</p>
+<p>- regular<br />
+d directory</p>
 </div>
 <div id="permissions" class="section level4">
 <h4>permissions</h4>
-<p>r read w write x edit/traverse - nothing</p>
+<p>r read<br />
+w write<br />
+x edit/traverse<br />
+- nothing</p>
 </div>
 <div id="chmod" class="section level4">
 <h4>chmod</h4>
-<p>+ add permission - subtract permission = set permission u user g group a all others</p>
+<p>+ add permission<br />
+- subtract permission<br />
+= set permission<br />
+u user<br />
+g group<br />
+a all others</p>
 <p>Example: chmod u+r filename.txt</p>
 </div>
 <div id="grep" class="section level4">
 <h4>grep</h4>
-<p>{word} returns line with those characters -w match whole word -n add line numbers -v print lines with no matches</p>
+<p>{word} returns line with those characters<br />
+-w match whole word -n add line numbers<br />
+-v print lines with no matches</p>
 </div>
 <div id="find-dir" class="section level4">
 <h4>find {dir}</h4>
-<p>-type specify type of file -maxdepth specifiy layers -empty find empty directories</p>
+<p>-type specify type of file<br />
+-maxdepth specifiy layers<br />
+-empty find empty directories</p>
+</div>
+<div id="awk-script-file" class="section level4">
+<h4>awk ’{script } file</h4>
+<p>-f instruction file<br />
+-v assigns value to variable awk -v name=Jerry ‘{Print}’</p>
+</div>
+<div id="cut-exportfile" class="section level4">
+<h4>cut [exportfile]</h4>
+<p>-b specify byte position to cut with list or range<br />
+-c character (includes special chars) same thing<br />
+–complement cut opposite of<br />
+-d cut by delimiter<br />
+-f index to specify adter delimiter<br />
+–output-delimiter=‘’ set output delimiter to space</p>
 </div>
 </div>
 <div id="unix-study-questions" class="section level2">
 <h2>Unix Study questions</h2>
 <p><strong>0.</strong> What is UNIX</p>
+<p>An operating system that consists of kernel, shell, and programs. Common varieties include linux and MacOS.</p>
 <p><strong>1.</strong> Describe briefly the unix shell</p>
+<p>The shell is a command line interpreter. The kernel executes the commands.</p>
 <p><strong>2.</strong> Describe the use of the unix cut command</p>
+<p>segmenting data by delimiter or extracting characters by index</p>
 <p><strong>3.</strong> Describe the use of the unix awk command</p>
+<p>Used to extract data.</p>
 <p><strong>4.</strong> Describe the model of unix pipes</p>
+<p>When a command executes the result is stored in linux’s VFS (virtual file system) that gets mounted to Kernel Space during boot. Then in a a process is created for each command one to process the data and write into the pipefs and one to read from the pipedfs and process the data again.</p>
 <p><strong>5.</strong> Describe how the unix sort and uniq commands differ and how they are similar</p>
+<p>Similar sort has -u option that runs uniq after sort. Uniq loads less data into memory. Sort command sorts stuff uniq compares each line and only prints out uniq lines.</p>
 <p><strong>6.</strong> How does the unix file permission model work</p>
+<p>using ls -l first position file or directory, first three positions = user permission, second three positions = group permissions, third 3 positions = global permissions.</p>
+<p>r = read w = write x = execute</p>
+<p>use chmod to change</p>
 <p><strong>7.</strong> Is there a way to erase all files in the current directory, including all its sub-directories, using only one command</p>
+<p>rm -rf *</p>
 <p><strong>8.</strong> Describe the model of string interpolation in the unix shell</p>
+<p>command [-options] [-arguments]</p>
 <p><strong>9.</strong> Compare and contrast relative vs absolute paths</p>
+<p>Absolute path specifies a unique directory in a file system starting with the root directory. A relative path starts with a given working directory.</p>
 <p><strong>10.</strong> Write a command to download the file <a href="http://example.com/data.csv.gz" class="uri">http://example.com/data.csv.gz</a>, unzip it, and find the number of unique values of the 4th column of the file.</p>
+<p>wget <a href="http://static.crunchbase.com/data_crunchbase/csv_export_sample.tar.gz" class="uri">http://static.crunchbase.com/data_crunchbase/csv_export_sample.tar.gz</a><br />
+gunnzip <a href="http://static.crunchbase.com/data_crunchbase/csv_export_sample.tar.gz" class="uri">http://static.crunchbase.com/data_crunchbase/csv_export_sample.tar.gz</a><br />
+tar -xf csv_export_sample.tar jobs.csv<br />
+cut -d“,” -f4 jobs.csv | sort | uniq</p>
 </div>
 
 

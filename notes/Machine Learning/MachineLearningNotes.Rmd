@@ -42,23 +42,47 @@ Dataset segmented then choose 1 out of N segments to be test
 
 **7.** How does the train and test error change vs model complexity?
 
-
+Model Complexity UP = More BIAS = LESS train error = first less test then more.
+Model Complexity DOWN = More VARIANCE = MORE train error = first LESS test error then MORE error
 
 **8.** Describe overfitting.
 
+Model enterpreting random noise as patterns in the data.
+
 **9.** How do we select models with grid/random search?
+
+Randomly select n parameters from N parameter possibilities. If parameters dont change within M rounds then stop.
 
 **10.** What is an ROC curve?
 
+Receiver Operating Characteristic curve. TPR vs FPR curve on some threshold parameter.
+
 **11.** What is regularization? Give an example.
+
+Introducing data to prevent overfitting. 
+LASSO: min{ (Y-XB)'(Y-XB) + l*sum(B) }
 
 **12.** Describe the LASSO.
 
+Just like linear regression except to add a term in order to shrink unimportatn terms  to 0.
+
 **13.** Describe decision trees and how we fit them.
+
+Split data into subsets in order to train smaller models. Branches split based on some criterion such as Gini impurity. 
 
 **14.** Compare random forests and GBMs.
 
+GBM:
+1. Initial Model e.g. Linear Regression F(x)  
+2. Compute some loss e.g. (y - F(x))^2  
+3. Add a new learner to try and learn the residuals.  
+h(x) = min{d(Loss)/d(F(x))}  
+4. Compute Multiplier g = min{Loss(F(x) + g*h(x),y)}  
+5. Update F\_m(x) = F\_m-1(x) + g\_m*h_m(x)  
+
 **15.** Describe the main tuning parameters for GBMs. How do they relate to model complexity?
+
+
 
 **16.** Describe 3 tricks in training neural networks. 
 
